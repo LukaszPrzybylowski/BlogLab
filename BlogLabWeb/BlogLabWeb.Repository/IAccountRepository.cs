@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BlogLabWeb.Repository
 {
-    public interface IAccountRipository
+    public interface IAccountRepository
     {
         public Task<IdentityResult> CreateAsync(ApplicationUserIdentity user, CancellationToken cancellationToken);
          

@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.32930.78
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlogLabWeb", "BlogLabWeb\BlogLabWeb.csproj", "{54A51BFF-A911-441F-B855-C20FFB1B413C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlogLabWeb", "BlogLabWeb\BlogLabWeb.csproj", "{54A51BFF-A911-441F-B855-C20FFB1B413C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlogLab.Models", "BlogLab.Models\BlogLab.Models.csproj", "{39BB597B-4148-4854-BFDE-813D857B83AD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlogLab.Models", "BlogLab.Models\BlogLab.Models.csproj", "{39BB597B-4148-4854-BFDE-813D857B83AD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlogLabWeb.Repository", "BlogLabWeb.Repository\BlogLabWeb.Repository.csproj", "{27977DA5-A6F0-4643-A5B0-E17676A71669}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlogLabWeb.Repository", "BlogLabWeb.Repository\BlogLabWeb.Repository.csproj", "{27977DA5-A6F0-4643-A5B0-E17676A71669}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlogLab.Identity", "BlogLab.Identity\BlogLab.Identity.csproj", "{A5591176-B1DA-46EF-9371-4ABF67506ABF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{27977DA5-A6F0-4643-A5B0-E17676A71669}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{27977DA5-A6F0-4643-A5B0-E17676A71669}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{27977DA5-A6F0-4643-A5B0-E17676A71669}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5591176-B1DA-46EF-9371-4ABF67506ABF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5591176-B1DA-46EF-9371-4ABF67506ABF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5591176-B1DA-46EF-9371-4ABF67506ABF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5591176-B1DA-46EF-9371-4ABF67506ABF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
