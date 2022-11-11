@@ -1,3 +1,4 @@
+using BlogLab.Models.Settings;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -13,9 +14,10 @@ namespace BlogLabWeb
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+
+        public Startup(IConfiguration config)
         {
-            Configuration = configuration;
+            Configuration = config;
         }
 
         public IConfiguration Configuration { get; }
@@ -23,7 +25,7 @@ namespace BlogLabWeb
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddRazorPages();
+            services.Configure<CloudinaryOptions>(Configuration.GetSection("CloudinaryOptions"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
