@@ -25,7 +25,7 @@ namespace BlogLab.Identity
             return await _accountRepository.CreateAsync(user, cancellationToken);
         }
 
-        public async Task<ApplicationUserIdentity?> FindByNameAsync(string normalizedUserName, CancellationToken cancellationToken)
+        public async Task<ApplicationUserIdentity> FindByNameAsync(string normalizedUserName, CancellationToken cancellationToken)
         {
             return await _accountRepository.GetByUsernameAsync(normalizedUserName, cancellationToken);
         }
@@ -37,17 +37,17 @@ namespace BlogLab.Identity
 
 
 
-        public Task<ApplicationUserIdentity?> FindByEmailAsync(string normalizedEmail, CancellationToken cancellationToken)
+        public Task<ApplicationUserIdentity> FindByEmailAsync(string normalizedEmail, CancellationToken cancellationToken)
         {
             throw new NotImplementedException();
         }
 
-        public Task<ApplicationUserIdentity?> FindByIdAsync(string userId, CancellationToken cancellationToken)
+        public Task<ApplicationUserIdentity> FindByIdAsync(string userId, CancellationToken cancellationToken)
         {
             throw new NotImplementedException();
         }
 
-        public Task<string?> GetEmailAsync(ApplicationUserIdentity user, CancellationToken cancellationToken)
+        public Task<string> GetEmailAsync(ApplicationUserIdentity user, CancellationToken cancellationToken)
         {
             return Task.FromResult(user.Email);
         }
@@ -57,18 +57,18 @@ namespace BlogLab.Identity
             return Task.FromResult(true);
         }
 
-        public Task<string?> GetNormalizedEmailAsync(ApplicationUserIdentity user, CancellationToken cancellationToken)
+        public Task<string> GetNormalizedEmailAsync(ApplicationUserIdentity user, CancellationToken cancellationToken)
         {
             return Task.FromResult(user.NormalizedEmail);
         }
 
-        public Task<string?> GetNormalizedUserNameAsync(ApplicationUserIdentity user, CancellationToken cancellationToken)
+        public Task<string> GetNormalizedUserNameAsync(ApplicationUserIdentity user, CancellationToken cancellationToken)
         {
             return Task.FromResult(user.NormalizedUsername);
 
         }
 
-        public Task<string?> GetPasswordHashAsync(ApplicationUserIdentity user, CancellationToken cancellationToken)
+        public Task<string> GetPasswordHashAsync(ApplicationUserIdentity user, CancellationToken cancellationToken)
         {
             return Task.FromResult(user.PasswordHash);
         }
@@ -78,7 +78,7 @@ namespace BlogLab.Identity
             return Task.FromResult(user.ApplicationUserId.ToString());
         }
 
-        public Task<string?> GetUserNameAsync(ApplicationUserIdentity user, CancellationToken cancellationToken)
+        public Task<string> GetUserNameAsync(ApplicationUserIdentity user, CancellationToken cancellationToken)
         {
             return Task.FromResult(user.Username);
         }
@@ -88,7 +88,7 @@ namespace BlogLab.Identity
             return Task.FromResult(user.PasswordHash != null);
         }
 
-        public Task SetEmailAsync(ApplicationUserIdentity user, string? email, CancellationToken cancellationToken)
+        public Task SetEmailAsync(ApplicationUserIdentity user, string email, CancellationToken cancellationToken)
         {
             user.Email = email;
             return Task.FromResult(0);
@@ -99,25 +99,25 @@ namespace BlogLab.Identity
             return Task.FromResult(0);
         }
 
-        public Task SetNormalizedEmailAsync(ApplicationUserIdentity user, string? normalizedEmail, CancellationToken cancellationToken)
+        public Task SetNormalizedEmailAsync(ApplicationUserIdentity user, string normalizedEmail, CancellationToken cancellationToken)
         {
             user.NormalizedEmail = normalizedEmail;
             return Task.FromResult(0);
         }
 
-        public Task SetNormalizedUserNameAsync(ApplicationUserIdentity user, string? normalizedName, CancellationToken cancellationToken)
+        public Task SetNormalizedUserNameAsync(ApplicationUserIdentity user, string normalizedName, CancellationToken cancellationToken)
         {
             user.NormalizedUsername = normalizedName;
             return Task.FromResult(0);
         }
 
-        public Task SetPasswordHashAsync(ApplicationUserIdentity user, string? passwordHash, CancellationToken cancellationToken)
+        public Task SetPasswordHashAsync(ApplicationUserIdentity user, string passwordHash, CancellationToken cancellationToken)
         {
             user.PasswordHash = passwordHash;
             return Task.FromResult(0);
         }
 
-        public Task SetUserNameAsync(ApplicationUserIdentity user, string? userName, CancellationToken cancellationToken)
+        public Task SetUserNameAsync(ApplicationUserIdentity user, string userName, CancellationToken cancellationToken)
         {
             user.Username = userName;
             return Task.FromResult(0);
