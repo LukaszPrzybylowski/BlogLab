@@ -9,9 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlogLab.Models", "BlogLab.M
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlogLabWeb.Repository", "BlogLabWeb.Repository\BlogLabWeb.Repository.csproj", "{27977DA5-A6F0-4643-A5B0-E17676A71669}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlogLab.Identity", "BlogLab.Identity\BlogLab.Identity.csproj", "{A5591176-B1DA-46EF-9371-4ABF67506ABF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlogLab.Services", "BlogLab.Services\BlogLab.Services.csproj", "{FC800763-8674-4529-AE0F-C40D46F5BA96}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlogLab.Services", "BlogLab.Services\BlogLab.Services.csproj", "{FC800763-8674-4529-AE0F-C40D46F5BA96}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlogLab.Identity", "BlogLab.Identity\BlogLab.Identity.csproj", "{E290BF66-BCC9-49F7-92FB-F39BAD08102D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,14 +31,14 @@ Global
 		{27977DA5-A6F0-4643-A5B0-E17676A71669}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{27977DA5-A6F0-4643-A5B0-E17676A71669}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{27977DA5-A6F0-4643-A5B0-E17676A71669}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A5591176-B1DA-46EF-9371-4ABF67506ABF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A5591176-B1DA-46EF-9371-4ABF67506ABF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A5591176-B1DA-46EF-9371-4ABF67506ABF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A5591176-B1DA-46EF-9371-4ABF67506ABF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FC800763-8674-4529-AE0F-C40D46F5BA96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FC800763-8674-4529-AE0F-C40D46F5BA96}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC800763-8674-4529-AE0F-C40D46F5BA96}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC800763-8674-4529-AE0F-C40D46F5BA96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E290BF66-BCC9-49F7-92FB-F39BAD08102D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E290BF66-BCC9-49F7-92FB-F39BAD08102D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E290BF66-BCC9-49F7-92FB-F39BAD08102D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E290BF66-BCC9-49F7-92FB-F39BAD08102D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

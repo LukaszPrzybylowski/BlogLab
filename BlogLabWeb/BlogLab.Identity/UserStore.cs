@@ -2,6 +2,8 @@
 using BlogLab.Models.Account;
 using Microsoft.AspNetCore.Identity;
 using BlogLabWeb.Repository;
+using System.Threading.Tasks;
+using System.Threading;
 
 namespace BlogLab.Identity
 {
@@ -25,7 +27,7 @@ namespace BlogLab.Identity
 
         public async Task<ApplicationUserIdentity?> FindByNameAsync(string normalizedUserName, CancellationToken cancellationToken)
         {
-            return await _accountRepository.GetByUsernameAsync(normalizedUserName, cancellationToken);  
+            return await _accountRepository.GetByUsernameAsync(normalizedUserName, cancellationToken);
         }
 
         public Task<IdentityResult> DeleteAsync(ApplicationUserIdentity user, CancellationToken cancellationToken)
@@ -33,7 +35,7 @@ namespace BlogLab.Identity
             throw new NotImplementedException();
         }
 
-       
+
 
         public Task<ApplicationUserIdentity?> FindByEmailAsync(string normalizedEmail, CancellationToken cancellationToken)
         {
@@ -83,7 +85,7 @@ namespace BlogLab.Identity
 
         public Task<bool> HasPasswordAsync(ApplicationUserIdentity user, CancellationToken cancellationToken)
         {
-            return Task.FromResult(user.PasswordHash!= null);
+            return Task.FromResult(user.PasswordHash != null);
         }
 
         public Task SetEmailAsync(ApplicationUserIdentity user, string? email, CancellationToken cancellationToken)
@@ -131,8 +133,4 @@ namespace BlogLab.Identity
             // Nothing to dispose
         }
     }
-
-
-
-
 }
