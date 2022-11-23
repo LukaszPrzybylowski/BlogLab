@@ -1,11 +1,12 @@
-export class ApplicaitonUserLogin {
+export class ApplicationUser {
 
     constructor(
-        public applicationUserId: number,
-        public username: string,
-        public fullname: string,
-        public email: string,
-        public token: string
+        public applicationUserId: number|null,
+        public username: string|null,
+        public fullname: string|null,
+        public email: string|null,
+        public token: string|null
         ){
-    }
+    
+        }
 }

@@ -1,4 +1,4 @@
-export class ApplicaitonUserLogin {
+export class ApplicationUserLogin {
 
     constructor(
         public username: string,

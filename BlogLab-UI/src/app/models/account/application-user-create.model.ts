@@ -1,4 +1,4 @@
-export class ApplicaitonUserCreate {
+export class ApplicationUserCreate {
 
     constructor(
         public username: string,
