@@ -8,12 +8,14 @@ import {
 import { catchError, Observable, throwError } from 'rxjs';
 import { AccountService } from '../services/account.service';
 import { ToastrService } from 'ngx-toastr';
+import { Router } from '@angular/router';
 
 @Injectable()
 export class ErrorInterceptor implements HttpInterceptor {
 
   constructor(
     private toastr: ToastrService,
+    private router: Router,
     private accountService: AccountService
   ) {}
 
@@ -54,7 +56,7 @@ export class ErrorInterceptor implements HttpInterceptor {
       }
       this.toastr.error(errorMessage, error.statusText);
       console.log(error.error);
-    } else if (!!error?.error.errors?.Content && (typeof error.error.errors.Content) == 'object'){
+    } else if (!!error?.error?.errors?.Content && (typeof error.error.errors.Content) == 'object'){
       let errorObject = error.error.errors.Content;
       let errorMessage = '';
       for (const key in errorObject){
@@ -64,7 +66,7 @@ export class ErrorInterceptor implements HttpInterceptor {
       this.toastr.error(errorMessage, error.statusCode);
       console.log(error.error);
     } else if (!!error.error) {
-      let errorMessage = ((typeof error.error) == 'string')
+      let errorMessage = ((typeof error.error) === 'string')
         ? error.error
         : 'There was a validation error.';
       this.toastr.error(errorMessage, error.statusCode);
@@ -80,7 +82,7 @@ export class ErrorInterceptor implements HttpInterceptor {
     let errorMessage = 'Please login to your account';
     this.accountService.logout();
     this.toastr.error(errorMessage, error.statusText);
-    // rout to the login page
+    this.router.navigate(['/login']);
   }
 
   handle500Error(error : any){
