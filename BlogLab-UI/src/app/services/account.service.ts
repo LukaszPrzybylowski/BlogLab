@@ -54,7 +54,7 @@ export class AccountService {
     this.currentUserSubject$.next(user);
   }
 
-  public get currentUser() : ApplicationUser {
+  public get currentUserValue() : ApplicationUser {
     return this.currentUserSubject$.value;
   }
 
