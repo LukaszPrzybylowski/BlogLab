@@ -5,8 +5,8 @@
     </div>
 
     <div class="d-flex justify-content-center mt-4">
-        <h6>Written by {{blog.username}} - {{blog.publishDate | date: "medium"}}
-            <span *ngIf="blog.publishDate != blog.updateDate"> | Updated on {{blog.updateDate | date:"medium"}}</span>        
+        <h6>Written by {{blog.username}} - {{blog.publishDate | date:'medium'}}
+            <span *ngIf="blog.publishDate !== blog.updateDate"> | Updated on {{blog.updateDate | date:'medium'}}</span>
         </h6>
     </div>
 
@@ -17,11 +17,7 @@
         </p>
     </div>
 
-    <app-comment-system 
-        *ngIf="blog"
-        [blogId]="blog.blogId">
-
-    </app-comment-system>
+    <app-comment-system *ngIf="blog" [blogId]="blog.blogId"></app-comment-system>
 
 </div>
 
